@@ -203,9 +203,9 @@
                     <img src="./static/images/control.png" alt="Image description" width="100%">
                   </div>
                 </div>
-                <div class="columns is-centered has-text-centered">
+                <div class="columns is-centered">
                   <div class="column">
-                      <p style="text-align: center;font-size: 18px">Given a sequence of historical image observations, we first use Co-tracker to extract dense point trajectories and keep active point trajectories with significant movement.
+                      <p style="text-align: left;font-size: 18px">Given a sequence of historical image observations, we first use Co-tracker to extract dense point trajectories and keep active point trajectories with significant movement.
                         We then overlay active point trajectories on the robot’s initial observation frame as visual trace prompting and feed both the image overlaid with visual traces and the original image into VLA as model input.</p>
                 </div>
               </div>
@@ -237,9 +237,9 @@
                     <img src="./static/images/simpler-overall.png" alt="Image description" width="100%">
                   </div>
                 </div>
-                <div class="columns is-centered has-text-centered">
+                <div class="columns is-centered ">
                   <div class="column">
-                      <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across various tasks and evaluation metrics in the SimplerEnv Google robot tasks. The improvements are evident in both the full-scale 7B models (<strong>TraceVLA</strong> vs OpenVLA) and their 4B versions (<strong>TraceVLA-Phi3</strong> vs OpenVLA-Phi3). </p>
+                      <p style="text-align: left;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across various tasks and evaluation metrics in the SimplerEnv Google robot tasks. The improvements are evident in both the full-scale 7B models (<strong>TraceVLA</strong> vs OpenVLA) and their 4B versions (<strong>TraceVLA-Phi3</strong> vs OpenVLA-Phi3). </p>
                 </div>
               </div>
               <div class="row">
@@ -247,9 +247,9 @@
                   <img src="./static/images/simpler-agg.png" alt="Image description" width="100%">
                 </div>
               </div>
-              <div class="columns is-centered has-text-centered">
+              <div class="columns is-centered ">
                 <div class="column">
-                    <p style="text-align: center;font-size: 18px"><strong>Environmental Variant Aggregation</strong>: <strong>TraceVLA</strong> shows substantial enhancements under camera orientation changes, distractor presence, and background alterations, with an average improvement exceeding <strong>20%</strong> in these categories.</p>
+                    <p style="text-align: left;font-size: 18px"><strong>Environmental Variant Aggregation</strong>: <strong>TraceVLA</strong> shows substantial enhancements under camera orientation changes, distractor presence, and background alterations, with an average improvement exceeding <strong>20%</strong> in these categories.</p>
               </div>
             </div>
               </td>
@@ -284,9 +284,9 @@
                   <img src="./static/images/real_general.png" alt="Image description" width="100%">
                 </div>
               </div>
-              <div class="columns is-centered has-text-centered">
+              <div class="columns is-centered ">
                 <div class="column">
-                    <p style="text-align: center;font-size: 18px">We design 4 real-world robot tasks with different manipulation skills and objects and 4 unseen tasks involving novel objects, goals, and language instructions for evaluating generalization in real robot settings.</p>
+                    <p style="text-align: left;font-size: 18px">We design 4 real-world robot tasks with different manipulation skills and objects and 4 unseen tasks involving novel objects, goals, and language instructions for evaluating generalization in real robot settings.</p>
               </div>
             </div>
               <div class="row">
@@ -294,12 +294,10 @@
                   <img src="./static/images/real.jpg" alt="Image description" width="100%">
                 </div>
               </div>
-              <div class="columns is-centered has-text-centered">
+              <div class="columns is-centered ">
                 <div class="column">
-                <div class="content has-text-justified interpolation-panel">
-                    <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across diverse tasks including
+                    <p style="text-align: left;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across diverse tasks including
                       soft object manipulation, pick-and-place operations, and object movement and demonstrates superior generalization</p>
-                </div>
               </div>
             </div>
               </td>
@@ -330,9 +328,9 @@
                   </div>
                 </div>
               <br>
-              <div class="columns is-centered has-text-centered">
+              <div class="columns is-centered ">
                 <div class="column">
-                    <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong>'s memory overhead is manageable at less than 10GB when using 8 H100 GPUs, with the difference decreasing at smaller batch sizes. In terms of speed, the model introduces three main components during inference: image/text tokens (0.002s), CoTracker tracking (0.03s), and dense point tracking (0.004s) per timestep. These additional computational costs remain relatively small and well-optimized due to GPU attention optimization.</p>
+                    <p style="text-align: left;font-size: 18px"><strong>TraceVLA</strong>'s memory overhead is manageable at less than 10GB when using 8 H100 GPUs, with the difference decreasing at smaller batch sizes. In terms of speed, the model introduces three main components during inference: image/text tokens (0.002s), CoTracker tracking (0.03s), and dense point tracking (0.004s) per timestep. These additional computational costs remain relatively small and well-optimized due to GPU attention optimization.</p>
               </div>
             </div>
               </td>
@@ -353,9 +351,9 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-8">
           <div class="content">
-            <a style="color:hsla(49, 84%, 53%, 0.862)" href="#top"><i class="fa fa-arrow-up"></i><br/>Return to top</a>
+            <a style="color:hsla(39, 82%, 55%, 0.862)" href="#top"><i class="fa fa-arrow-up"></i><br/>Return to top</a>
             <p>
-              Website from <a style="color:hsla(49, 84%, 53%, 0.862)" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under <a style="color:hsla(49, 84%, 53%, 0.862)"
+              Website from <a style="color:hsla(39, 82%, 55%, 0.862)" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under <a style="color:hsla(39, 82%, 55%, 0.862)"
               href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
               International</a>
             </p>
