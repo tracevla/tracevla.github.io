@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./static/images/favicon.jpg">
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+<body>
+    <section class="hero">
+      <div class="hero-body no-bottom-padding">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a target="_blank" href="https://ruijiezheng.com/">Ruijie Zheng</a><sup>*</sup><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://cheryyunl.github.io">Yongyuan Liang</a><sup>*</sup><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://shuaiyihuang.github.io/">Shuaiyi Huang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;<br>
+                  <a target="_blank" href="https://www.microsoft.com/en-us/research/people/jfgao/">JJianfeng Gao</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://users.umiacs.umd.edu/~hal/">Hal Daumé III</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://www.microsoft.com/en-us/research/people/akolobov/">Andrey Kolobov</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://furong-huang.com/">Furong Huang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                  <a target="_blank" href="https://jwyang.github.io//">Jianwei Yang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                  <br /><sup>1</sup>University of Maryland&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Microsoft Research
+                  <br>&ast; Equal contribution.   
+                </span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <!-- <span class="link-block">
+                    <a href="https://arxiv.org/abs/2406.00439"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span> -->
+  
+                  <!-- arXiv Link. -->
+                  <span class="link-block">
+                    <a target="_blank" href="./tracevla.pdf"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href=""
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                      </a>
+                    </span>
+                    <!-- Dataset Link. -->
+                    <span class="link-block">
+                      <a href=""
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <img src="static/images/hf_icon.svg" />
+                        </span>
+                        <span>Models</span>
+                        </a>
+                      </span>
+
+                  <span class="link-block">
+                    <a target="_blank" href=""
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="fab fa-twitter"></i>
+                      </span>
+                      <span>Twitter</span>
+                    </a>
+                  </span>
+                </div>
+    
+              </div>
+              </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="./static/images/tracevla.png" alt="Image description" width="100%">
+        </div>  
+        <br> 
+        <!-- <h2 class="subtitle has-text-centered"> -->
+        <h2 class="subtitle">
+          <!-- Given a scene, our approach (VRB) learns  <strong> actionable representations </strong> for robot learning. VRB predicts contact points and a post-contact trajectory learned from <strong> human videos </strong>.  -->
+          <strong>Visual trace prompting</strong> enhances VLA models' spatial-temporal understanding, boosting manipulation performance.<br>
+          In the inputs of <strong>TraceVLA</strong>, the first image shows the original robot’s observation, while the second contains the same image with overlaid visual traces. A separator token is then inserted between the visual tokens of these two images, then concatenating with text tokens and feeding into the underlying vision language model backbone to output action tokens.
+        </h2>
+        
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+      </div>
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds ">
+          <div class="content has-text-justified">
+            Although large vision-language-action (VLA) models pretrained on extensive robot datasets offer promising generalist policies for robotic learning, they still struggle with spatial-temporal dynamics in interactive robotics, making them less effective in handling complex tasks, such as manipulation. In this work, we introduce visual trace prompting, a simple yet effective approach to facilitate VLA models’ spatial-temporal awareness for action prediction by encoding state-action trajectories visually. We develop a new <strong>TraceVLA</strong> model by finetuning OpenVLA on our own collected dataset of 150K robot manipulation trajectories using visual trace prompting. Evaluations of <strong>TraceVLA</strong> across 137 configurations in SimplerEnv and 4 tasks on a physical WidowX robot demonstrate state-of-the-art performance, outperforming OpenVLA by 10% on SimplerEnv and <strong>3.5x</strong> on real-robot tasks and exhibiting robust generalization across diverse embodiments and scenarios. To further validate the effectiveness and generality of our method, we present a compact VLA model based on 4B Phi-3-Vision, pretrained on the Open-X-Embodiment and finetuned on our dataset, rivals the 7B OpenVLA baseline while significantly improving inference efficiency.
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Visual Trace Generation & Close-loop Control with TraceVLA</h2>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="./static/images/control.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                      <p style="text-align: center;font-size: 18px">Given a sequence of historical image observations, we first use Co-tracker to extract dense point trajectories and keep active point trajectories with significant movement.
+                        We then overlay active point trajectories on the robot’s initial observation frame as visual trace prompting and feed both the image overlaid with visual traces and the original image into VLA as model input.</p>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Simulation Benchmark: SimplerEnv</h2>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="./static/images/simpler-overall.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                      <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across various tasks and evaluation metrics in the SimplerEnv Google robot tasks. The improvements are evident in both the full-scale 7B models (<strong>TraceVLA</strong> vs OpenVLA) and their 4B versions (<strong>TraceVLA-Phi3</strong> vs OpenVLA-Phi3). </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <img src="./static/images/simpler-agg.png" alt="Image description" width="100%">
+                </div>
+              </div>
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <p style="text-align: center;font-size: 18px"><strong>Environmental Variant Aggregation</strong>: <strong>TraceVLA</strong> shows substantial enhancements under camera orientation changes, distractor presence, and background alterations, with an average improvement exceeding <strong>20%</strong> in these categories.</p>
+              </div>
+            </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Real-Robot Benchmark</h2>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="./static/images/real_robot.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+              <div class="row">
+                <div class="col">
+                  <img src="./static/images/real_general.png" alt="Image description" width="100%">
+                </div>
+              </div>
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <p style="text-align: center;font-size: 18px">We design 4 real-world robot tasks with different manipulation skills and objects and 4 unseen tasks involving novel objects, goals, and language instructions for evaluating generalization in real robot settings.</p>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col">
+                  <img src="./static/images/real.jpg" alt="Image description" width="100%">
+                </div>
+              </div>
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified interpolation-panel">
+                    <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across diverse tasks including
+                      soft object manipulation, pick-and-place operations, and object movement and demonstrates superior generalization</p>
+                </div>
+              </div>
+            </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Training Memory Cost and Inference Speed</h2>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="./static/images/exp-cost.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+              <br>
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <p style="text-align: center;font-size: 18px"><strong>TraceVLA</strong>'s memory overhead is manageable at less than 10GB when using 8 H100 GPUs, with the difference decreasing at smaller batch sizes. In terms of speed, the model introduces three main components during inference: image/text tokens (0.002s), CoTracker tracking (0.03s), and dense point tracking (0.004s) per timestep. These additional computational costs remain relatively small and well-optimized due to GPU attention optimization.</p>
+              </div>
+            </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+
+  <br><br><br>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <div class="content">
+            <a style="color:hsla(49, 84%, 53%, 0.862)" href="#top"><i class="fa fa-arrow-up"></i><br/>Return to top</a>
+            <p>
+              Website from <a style="color:hsla(49, 84%, 53%, 0.862)" href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under <a style="color:hsla(49, 84%, 53%, 0.862)"
+              href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+              International</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
