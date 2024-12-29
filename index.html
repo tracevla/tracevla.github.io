@@ -94,12 +94,12 @@
   
                   <!-- arXiv Link. -->
                   <span class="link-block">
-                    <a target="_blank" href="./tracevla.pdf"
+                    <a target="_blank" href="https://arxiv.org/abs/2412.10345"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                           <i class="ai ai-arxiv"></i>
                       </span>
-                      <span>Paper</span>
+                      <span>Arxiv</span>
                     </a>
                   </span>
                   <span class="link-block">
@@ -219,6 +219,190 @@
     </div>
   </section>
 
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Real-Robot Rollouts</h2>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+            <div class="content has-text-justified">
+              <p>
+                Below are videos of TraceVLA and OpenVLA on physical WidowX-250 robot manipulation tasks with different manipulation skills and objects. (Videos are sped up by 2.5x.)
+              </p>
+            </div>
+            <div class="content has-text-justified">
+              <p><strong>TraceVLA</strong> masters soft object manipulation, pick-and-place operations, and object movement, demonstrating reliable performance in both in-distribution and out-of-distribution generalization tasks.</p>
+            </div>
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5>Fold Cloth</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (In-Distribution)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                      <source src="static/videos/fold_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                      TraceVLA
+                  </div>
+              </div>
+              <div style="width: 49%; display: inline-block;">
+                <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/fold_openvla.mp4" type="video/mp4">
+                </video>
+                <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                </div>
+              </div>
+              </div>
+              <div class="column  has-text-centered">
+                <h5>Pickplace Corn Pot</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (Out-of-Distribution: Unseen Task)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/corn_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    TraceVLA
+                  </div>
+                </div>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/openvla_corn.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5>Pick Banana to the Right of Plate</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (Out-of-Distribution: Unseen Task)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                      <source src="static/videos/banana_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                      TraceVLA
+                  </div>
+              </div>
+              <div style="width: 49%; display: inline-block;">
+                <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/banana_openvla.mp4" type="video/mp4">
+                </video>
+                <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                </div>
+              </div>
+              </div>
+              <div class="column  has-text-centered">
+                <h5>Lift AAA Battery</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (Out-of-Distribution: Unseen Objects)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/battery_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    TraceVLA
+                  </div>
+                </div>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/battery_openvla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column  has-text-centered">
+                <h5>Pick Eggplant on Plate</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (Out-of-Distribution: Unseen Task)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                      <source src="static/videos/eggplant_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                      TraceVLA
+                  </div>
+              </div>
+              <div style="width: 49%; display: inline-block;">
+                <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/eggplant_openvla.mp4" type="video/mp4">
+                </video>
+                <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                </div>
+              </div>
+              </div>
+              <div class="column  has-text-centered">
+                <h5>Push Cloth Left to Right</h5>
+                <p style="font-size: 15px; color: #2a2727; margin: 2px 10%; line-height: 1.2;">
+                  (Out-of-Distribution: Distracting Object, Inverse Motion)
+                </p>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/push_tracevla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    TraceVLA
+                  </div>
+                </div>
+                <div style="width: 49%; display: inline-block;">
+                  <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/push_openvla.mp4" type="video/mp4">
+                  </video>
+                  <div style="text-align: center; margin-top: 5px;">
+                    OpenVLA
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="columns is-centered ">
+                <div class="column">
+                    <p style="text-align: left;font-size: 18px">We design 8 real-world robot tasks with different manipulation skills and objects and include unseen tasks involving novel objects, goals, and language instructions for evaluating generalization in real robot settings.</p>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col">
+                  <img src="./static/images/real.jpg" alt="Image description" width="100%">
+                </div>
+              </div>
+              <div class="columns is-centered ">
+                <div class="column">
+                    <p style="text-align: left;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across diverse tasks including
+                      soft object manipulation, pick-and-place operations, and object movement and demonstrates superior generalization</p>
+              </div>
+            </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
  
   <section class="section body">
     <div class="container">
@@ -266,54 +450,6 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Real-Robot Benchmark</h2>
-          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
-          <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths ">
-          <div class="content has-text-justified">
-            
-            <tr>
-              <td>
-                <div class="row">
-                  <div class="col">
-                    <img src="./static/images/real_robot.png" alt="Image description" width="100%">
-                  </div>
-                </div>
-              <div class="row">
-                <div class="col">
-                  <img src="./static/images/real_general.png" alt="Image description" width="100%">
-                </div>
-              </div>
-              <div class="columns is-centered ">
-                <div class="column">
-                    <p style="text-align: left;font-size: 18px">We design 4 real-world robot tasks with different manipulation skills and objects and 4 unseen tasks involving novel objects, goals, and language instructions for evaluating generalization in real robot settings.</p>
-              </div>
-            </div>
-              <div class="row">
-                <div class="col">
-                  <img src="./static/images/real.jpg" alt="Image description" width="100%">
-                </div>
-              </div>
-              <div class="columns is-centered ">
-                <div class="column">
-                    <p style="text-align: left;font-size: 18px"><strong>TraceVLA</strong> consistently outperforms OpenVLA across diverse tasks including
-                      soft object manipulation, pick-and-place operations, and object movement and demonstrates superior generalization</p>
-              </div>
-            </div>
-              </td>
-            </tr>
-          </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-full-width">
           <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Training Memory Cost and Inference Speed</h2>
           <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
           <div class="columns is-centered has-text-centered">
@@ -342,6 +478,18 @@
       </div>
     </div>
   </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{zheng2024tracevla,
+        title={TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies},
+        author={Zheng, Ruijie and Liang, Yongyuan and Huang, Shuaiyi and Gao, Jianfeng and Daum{\'e} III, Hal and Kolobov, Andrey and Huang, Furong and Yang, Jianwei},
+        journal={arXiv preprint arXiv:2412.10345},
+        year={2024}
+      }</code></pre>
+    </div>
+  </section>
      
 
   <br><br><br>
@@ -362,6 +510,16 @@
       </div>
     </div>
   </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.getElementsByTagName('video');
+        for (let video of videos) {
+            video.playbackRate = 2.0;
+        }
+    });
+</script>
+
 </body>
 </html>
 
